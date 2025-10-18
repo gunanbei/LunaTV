@@ -91,15 +91,24 @@ export async function getVideoResolutionFromM3u8(m3u8Url: string): Promise<{
           pingTime = performance.now() - pingStart; // 记录到失败为止的时间
         });
 
-      // 固定使用hls.js加载
-      const hls = new Hls();
+      // 固定使用hls.js加载，针对4K优化配置
+      const hls = new Hls({
+        debug: false,
+        enableWorker: true,
+        maxBufferLength: 10, // 测速时只需要少量缓冲
+        maxMaxBufferLength: 20,
+        maxBufferSize: 50 * 1000 * 1000, // 50MB缓冲用于测速
+        manifestLoadingMaxRetry: 3,
+        levelLoadingMaxRetry: 3,
+        fragLoadingMaxRetry: 3,
+      });
 
-      // 设置超时处理
+      // 设置超时处理 - 4K视频元数据加载可能需要更长时间
       const timeout = setTimeout(() => {
         hls.destroy();
         video.remove();
         reject(new Error('Timeout loading video metadata'));
-      }, 4000);
+      }, 8000); // 增加到8秒以支持4K视频
 
       video.onerror = () => {
         clearTimeout(timeout);
@@ -122,6 +131,8 @@ export async function getVideoResolutionFromM3u8(m3u8Url: string): Promise<{
         ) {
           clearTimeout(timeout);
           const width = video.videoWidth;
+          const height = video.videoHeight;
+          
           if (width && width > 0) {
             hls.destroy();
             video.remove();
@@ -139,6 +150,9 @@ export async function getVideoResolutionFromM3u8(m3u8Url: string): Promise<{
                       : width >= 854
                         ? '480p'
                         : 'SD'; // 480p: 854x480
+
+            // 输出调试信息，方便排查4K检测问题
+            console.log(`[清晰度检测] 宽度: ${width}px, 高度: ${height}px, 质量: ${quality}`);
 
             resolve({
               quality,

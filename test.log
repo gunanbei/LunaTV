@@ -1,0 +1,109 @@
+
+> moontv@0.1.0 dev /Users/linghuajian/IdeaProjects-TV/LunaTV
+> pnpm gen:manifest && next dev -H 0.0.0.0
+
+
+> moontv@0.1.0 gen:manifest /Users/linghuajian/IdeaProjects-TV/LunaTV
+> node scripts/generate-manifest.js
+
+✅ Generated manifest.json with site name: MoonTV
+  ▲ Next.js 14.2.30
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ⚠ Disabling SWC Minifer will not be an option in the next major version. Please report any issues you may be experiencing to https://github.com/vercel/next.js/issues
+> [PWA] PWA support is disabled
+> [PWA] PWA support is disabled
+ ✓ Ready in 4.2s
+ ✓ Compiled /src/middleware in 285ms (73 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 2.7s (1070 modules)
+Redis connected
+Redis ready
+Redis connected successfully
+ ✓ Compiled in 328ms (258 modules)
+ GET /login?redirect=%2F 200 in 3059ms
+ ⚠ Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ○ Compiling /api/login ...
+ ✓ Compiled /api/login in 876ms (833 modules)
+ POST /api/login 200 in 979ms
+ ○ Compiling / ...
+ ✓ Compiled / in 913ms (1280 modules)
+ POST /api/login 200 in 13ms
+ ✓ Compiled /api/playrecords in 115ms (938 modules)
+ GET /api/playrecords 200 in 172ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 662ms (1327 modules)
+ ✓ Compiled /api/admin/config in 116ms (963 modules)
+ GET /api/admin/config 200 in 192ms
+ ✓ Compiled /api/admin/config_subscription/fetch in 142ms (967 modules)
+ POST /api/admin/config_subscription/fetch 200 in 5700ms
+ ✓ Compiled /api/admin/config_file in 114ms (960 modules)
+ POST /api/admin/config_file 200 in 169ms
+ GET /api/admin/config 200 in 17ms
+ POST /api/admin/config_file 200 in 12ms
+ GET /api/admin/config 200 in 7ms
+ ✓ Compiled /api/playrecords in 122ms (962 modules)
+ GET /api/playrecords 200 in 214ms
+ ○ Compiling /play ...
+ ✓ Compiled /play in 580ms (1340 modules)
+ ✓ Compiled /api/search in 347ms (977 modules)
+ GET /api/search?q=%E6%AF%95%E6%AD%A3%E6%98%8E%E7%9A%84%E8%AF%81%E6%98%8E 200 in 9908ms
+ ✓ Compiled /api/favorites in 173ms (979 modules)
+ GET /api/favorites 200 in 253ms
+ POST /api/playrecords 200 in 8ms
+ DELETE /api/playrecords?key=api_14%2B60159 200 in 11ms
+ ✓ Compiled /api/skipconfigs in 196ms (977 modules)
+ DELETE /api/skipconfigs?key=api_14%2B60159 200 in 265ms
+ POST /api/skipconfigs 200 in 12ms
+ GET /api/favorites 200 in 30ms
+ POST /api/playrecords 200 in 19ms
+ POST /api/playrecords 200 in 19ms
+ POST /api/playrecords 200 in 7ms
+ POST /api/playrecords 200 in 15ms
+ POST /api/playrecords 200 in 9ms
+ POST /api/playrecords 200 in 9ms
+ POST /api/playrecords 200 in 11ms
+ POST /api/playrecords 200 in 13ms
+ POST /api/playrecords 200 in 7ms
+ POST /api/playrecords 200 in 16ms
+ GET /play?title=%E6%AF%95%E6%AD%A3%E6%98%8E%E7%9A%84%E8%AF%81%E6%98%8E&year=2025&stype=movie&source=api_46&id=32689 200 in 174ms
+ GET /api/playrecords 200 in 27ms
+ GET /api/skipconfigs 200 in 33ms
+ GET /api/favorites 200 in 34ms
+ DELETE /api/playrecords?key=api_46%2B32689 200 in 11ms
+ DELETE /api/skipconfigs?key=api_46%2B32689 200 in 7ms
+ POST /api/skipconfigs 200 in 7ms
+ GET /api/favorites 200 in 7ms
+ DELETE /api/playrecords?key=api_74%2B32689 200 in 11ms
+ DELETE /api/skipconfigs?key=api_74%2B32689 200 in 6ms
+ POST /api/skipconfigs 200 in 8ms
+ GET /api/favorites 200 in 8ms
+ DELETE /api/playrecords?key=api_46%2B32689 200 in 8ms
+ DELETE /api/skipconfigs?key=api_46%2B32689 200 in 8ms
+ POST /api/skipconfigs 200 in 7ms
+ GET /api/favorites 200 in 42ms
+ POST /api/playrecords 200 in 29ms
+ POST /api/playrecords 200 in 21ms
+ DELETE /api/playrecords?key=api_103%2B83819 200 in 7ms
+ DELETE /api/skipconfigs?key=api_103%2B83819 200 in 7ms
+ POST /api/skipconfigs 200 in 7ms
+ GET /api/favorites 200 in 16ms
+ POST /api/playrecords 200 in 12ms
+ POST /api/playrecords 200 in 12ms
+ POST /api/playrecords 200 in 6ms
+ DELETE /api/playrecords?key=api_101%2B81682 200 in 8ms
+ DELETE /api/skipconfigs?key=api_101%2B81682 200 in 7ms
+ POST /api/skipconfigs 200 in 7ms
+ GET /api/favorites 200 in 14ms
+ POST /api/playrecords 200 in 15ms
+ POST /api/playrecords 200 in 15ms
+ POST /api/playrecords 200 in 6ms
+ POST /api/playrecords 200 in 10ms
+ POST /api/playrecords 200 in 11ms
+ POST /api/playrecords 200 in 12ms
+ POST /api/playrecords 200 in 7ms
+ POST /api/playrecords 200 in 25ms

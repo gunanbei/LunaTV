@@ -1334,12 +1334,22 @@ function PlayPageClient() {
             const hls = new Hls({
               debug: false, // 关闭日志
               enableWorker: true, // WebWorker 解码，降低主线程压力
-              lowLatencyMode: true, // 开启低延迟 LL-HLS
+              lowLatencyMode: false, // 4K视频关闭低延迟模式以获得更稳定的播放
 
-              /* 缓冲/内存相关 */
-              maxBufferLength: 30, // 前向缓冲最大 30s，过大容易导致高延迟
-              backBufferLength: 30, // 仅保留 30s 已播放内容，避免内存占用
-              maxBufferSize: 60 * 1000 * 1000, // 约 60MB，超出后触发清理
+              /* 缓冲/内存相关 - 优化4K播放支持 */
+              maxBufferLength: 60, // 前向缓冲最大 60s，为4K提供更充足的缓冲
+              maxMaxBufferLength: 120, // 最大缓冲长度 120s，确保4K流畅播放
+              backBufferLength: 60, // 保留 60s 已播放内容，支持流畅回看
+              maxBufferSize: 200 * 1000 * 1000, // 约 200MB，为4K视频提供足够缓冲空间
+              maxBufferHole: 0.5, // 缓冲区空洞容忍度，避免4K播放中断
+
+              /* 4K优化参数 */
+              manifestLoadingMaxRetry: 6, // 增加清单加载重试次数
+              levelLoadingMaxRetry: 6, // 增加片段加载重试次数
+              fragLoadingMaxRetry: 6, // 增加碎片加载重试次数
+              manifestLoadingRetryDelay: 1000, // 清单加载重试延迟
+              levelLoadingRetryDelay: 1000, // 片段加载重试延迟
+              fragLoadingRetryDelay: 1000, // 碎片加载重试延迟
 
               /* 自定义loader */
               loader: blockAdEnabledRef.current
