@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  moontv-core-redis:
+    image: docker.lhpac.top/linghuajian1/lunatv:latest
+    container_name: moontv-core-redis
+    restart: unless-stopped
+    ports:
+      - '10086:3000'
+    environment:
+      - USERNAME=admin
+      - PASSWORD=wasd.0000
+      - NEXT_PUBLIC_STORAGE_TYPE=redis
+      - REDIS_URL=redis://moontv-redis:6379
+    networks:
+      - moontv-network-redis
+    depends_on:
+      - moontv-redis
+    # 明确指定平台架构（根据您的系统选择）
+    platform: linux/amd64  # 对于 Windows/Mac Intel 芯片，使用 amd64
+    # platform: linux/arm64  # 对于 Mac M1/M2 芯片，使用 arm64
+
+  moontv-redis:
+    image: redis:alpine
+    container_name: moontv-redis
+    restart: unless-stopped
+    networks:
+      - moontv-network-redis
+    # 启用持久化，避免数据丢失
+    volumes:
+      - ./data:/data
+    command: redis-server --appendonly yes
+
+networks:
+  moontv-network-redis:
+    driver: bridge
+

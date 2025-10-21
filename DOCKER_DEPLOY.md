@@ -1,8 +1,18 @@
 # 🐋 Docker镜像构建和部署指南
 
+## ⚠️ 重要提示：架构兼容性
+
+如果遇到 `exec format error` 错误，这是由于 Docker 镜像架构与您的系统不匹配。请查看 [DOCKER_TROUBLESHOOTING.md](DOCKER_TROUBLESHOOTING.md) 获取详细的解决方案。
+
+**快速修复：** 在 `docker-compose.yml` 中添加 `platform: linux/amd64`（或 `linux/arm64`，根据您的系统）。
+
+---
+
 ## 📦 快速开始
 
 ### 方法一：使用自动化脚本（推荐）
+
+#### 构建并推送到远程仓库（多平台支持）
 
 ```bash
 # 1. 登录Docker Hub
@@ -12,7 +22,16 @@ docker login
 ./docker-build-push.sh yourusername
 ```
 
-就这么简单！脚本会自动完成所有步骤。
+脚本会自动构建支持 **linux/amd64** 和 **linux/arm64** 的多平台镜像并推送到仓库。
+
+#### 仅本地构建（当前平台）
+
+```bash
+# 构建本地镜像（不推送）
+./docker-build-local.sh
+```
+
+构建的镜像标签为 `lunatv:latest`，可在本地使用。
 
 ---
 
@@ -27,6 +46,8 @@ docker login
 
 ### 2. 构建镜像
 
+#### 选项 A：单平台构建（仅当前系统架构）
+
 ```bash
 # 基础构建（只打latest标签）
 docker build -t yourusername/lunatv:latest .
@@ -34,6 +55,23 @@ docker build -t yourusername/lunatv:latest .
 # 构建并打上版本标签
 docker build -t yourusername/lunatv:100.0.1 -t yourusername/lunatv:latest .
 ```
+
+#### 选项 B：多平台构建（推荐，支持 AMD64 和 ARM64）
+
+```bash
+# 1. 创建并启用 buildx 构建器
+docker buildx create --name multiarch --use
+
+# 2. 构建并推送多平台镜像
+docker buildx build \
+  --platform linux/amd64,linux/arm64 \
+  -t yourusername/lunatv:latest \
+  -t yourusername/lunatv:100.0.1 \
+  --push \
+  .
+```
+
+**注意：** 多平台构建会直接推送镜像（使用 `--push` 参数），无需单独执行 push 命令。
 
 ### 3. 查看构建的镜像
 
