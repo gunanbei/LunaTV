@@ -11,6 +11,19 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    version: "100.0.3",
+    date: "2025-10-27",
+    added: [
+      // 无新增内容
+    ],
+    changed: [
+      // 无变更内容
+    ],
+    fixed: [
+      "修复 webkit 下播放器控件的展示 bug"
+    ]
+  },
+  {
     version: "100.0.2",
     date: "2025-10-23",
     added: [
