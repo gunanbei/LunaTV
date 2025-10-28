@@ -1,9 +1,9 @@
 
-> moontv@0.1.0 dev /Users/linghuajian/IdeaProjects-TV/LunaTV
+> moontv@0.1.0 dev /Users/gunanbei/coding/code/IdeaProjects/LunaTV
 > pnpm gen:manifest && next dev -H 0.0.0.0
 
 
-> moontv@0.1.0 gen:manifest /Users/linghuajian/IdeaProjects-TV/LunaTV
+> moontv@0.1.0 gen:manifest /Users/gunanbei/coding/code/IdeaProjects/LunaTV
 > node scripts/generate-manifest.js
 
 ✅ Generated manifest.json with site name: MoonTV
@@ -14,96 +14,1195 @@
 
  ✓ Starting...
  ⚠ Disabling SWC Minifer will not be an option in the next major version. Please report any issues you may be experiencing to https://github.com/vercel/next.js/issues
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
 > [PWA] PWA support is disabled
 > [PWA] PWA support is disabled
- ✓ Ready in 4.2s
- ✓ Compiled /src/middleware in 285ms (73 modules)
+ ✓ Ready in 2.7s
+ ✓ Compiled /src/middleware in 272ms (73 modules)
+request to https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap failed, reason: Client network socket disconnected before secure TLS connection was established
+
+Retrying 1/3...
  ○ Compiling /login ...
- ✓ Compiled /login in 2.7s (1070 modules)
+ ✓ Compiled /login in 3s (1070 modules)
+Redis reconnection attempt 1
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+ ✓ Compiled in 263ms (258 modules)
+Redis reconnecting...
+Redis reconnection attempt 2
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 3
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 4
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 5
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 6
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 7
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 8
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 9
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 10
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 11
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 12
+Redis max reconnection attempts exceeded
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis operation failed, retrying... (1/3)
+Error: connect ECONNREFUSED 127.0.0.1:6379
+Redis operation failed, retrying... (1/3)
+Error: connect ECONNREFUSED 127.0.0.1:6379
+Redis initial connection failed: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Will retry in 5 seconds...
+Redis reconnection attempt 1
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 2
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis reconnecting...
+Redis reconnection attempt 3
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis reconnecting...
+Redis reconnection attempt 4
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis reconnecting...
+Redis reconnection attempt 5
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis reconnecting...
+Redis reconnection attempt 6
+Redis client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis reconnecting...
 Redis connected
 Redis ready
-Redis connected successfully
- ✓ Compiled in 328ms (258 modules)
- GET /login?redirect=%2F 200 in 3059ms
- ⚠ Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- ○ Compiling /api/login ...
- ✓ Compiled /api/login in 876ms (833 modules)
- POST /api/login 200 in 979ms
+ GET /login?redirect=%2F 200 in 276362ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ ✓ Compiled /api/login in 312ms (833 modules)
+ POST /api/login 200 in 417ms
  ○ Compiling / ...
- ✓ Compiled / in 913ms (1280 modules)
- POST /api/login 200 in 13ms
- ✓ Compiled /api/playrecords in 115ms (938 modules)
- GET /api/playrecords 200 in 172ms
+ ✓ Compiled / in 1110ms (1279 modules)
+ ✓ Compiled /api/playrecords in 122ms (938 modules)
+ ✓ Compiled (941 modules)
+ GET /api/playrecords 200 in 315ms
+ GET /api/douban/categories?kind=tv&category=show&type=show&limit=20&start=0 200 in 524ms
+ GET /api/douban/categories?kind=movie&category=%E7%83%AD%E9%97%A8&type=%E5%85%A8%E9%83%A8&limit=20&start=0 200 in 526ms
+ GET /api/douban/categories?kind=tv&category=tv&type=tv&limit=20&start=0 200 in 529ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
  ○ Compiling /admin ...
- ✓ Compiled /admin in 662ms (1327 modules)
- ✓ Compiled /api/admin/config in 116ms (963 modules)
- GET /api/admin/config 200 in 192ms
- ✓ Compiled /api/admin/config_subscription/fetch in 142ms (967 modules)
- POST /api/admin/config_subscription/fetch 200 in 5700ms
- ✓ Compiled /api/admin/config_file in 114ms (960 modules)
- POST /api/admin/config_file 200 in 169ms
- GET /api/admin/config 200 in 17ms
- POST /api/admin/config_file 200 in 12ms
- GET /api/admin/config 200 in 7ms
- ✓ Compiled /api/playrecords in 122ms (962 modules)
- GET /api/playrecords 200 in 214ms
+ ✓ Compiled /admin in 859ms (1293 modules)
+ ✓ Compiled /api/admin/config in 211ms (959 modules)
+ GET /api/admin/config 200 in 301ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ ✓ Compiled /api/admin/config_subscription/fetch in 185ms (963 modules)
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ POST /api/admin/config_subscription/fetch 200 in 7199ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ ✓ Compiled /api/admin/config_file in 144ms (965 modules)
+ POST /api/admin/config_file 200 in 221ms
+ GET /api/admin/config 200 in 14ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ ✓ Compiled /api/playrecords in 146ms (967 modules)
+ GET /api/playrecords 200 in 212ms
+ ✓ Compiled /search in 353ms (1329 modules)
+ ✓ Compiled /api/searchhistory in 121ms (957 modules)
+ GET /api/searchhistory 200 in 176ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ ✓ Compiled /api/search/suggestions in 491ms (965 modules)
+ GET /api/search/suggestions?q=d 200 in 1208ms
+ GET /api/search/suggestions?q=dao%27mu 200 in 672ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ POST /api/searchhistory 200 in 26ms
+ ✓ Compiled /api/search/ws in 117ms (967 modules)
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ GET /api/search/ws?q=%E7%9B%97%E5%A2%93%E7%AC%94%E8%AE%B0 200 in 8239ms
  ○ Compiling /play ...
- ✓ Compiled /play in 580ms (1340 modules)
- ✓ Compiled /api/search in 347ms (977 modules)
- GET /api/search?q=%E6%AF%95%E6%AD%A3%E6%98%8E%E7%9A%84%E8%AF%81%E6%98%8E 200 in 9908ms
- ✓ Compiled /api/favorites in 173ms (979 modules)
- GET /api/favorites 200 in 253ms
- POST /api/playrecords 200 in 8ms
- DELETE /api/playrecords?key=api_14%2B60159 200 in 11ms
- ✓ Compiled /api/skipconfigs in 196ms (977 modules)
- DELETE /api/skipconfigs?key=api_14%2B60159 200 in 265ms
- POST /api/skipconfigs 200 in 12ms
- GET /api/favorites 200 in 30ms
- POST /api/playrecords 200 in 19ms
- POST /api/playrecords 200 in 19ms
- POST /api/playrecords 200 in 7ms
- POST /api/playrecords 200 in 15ms
- POST /api/playrecords 200 in 9ms
- POST /api/playrecords 200 in 9ms
- POST /api/playrecords 200 in 11ms
- POST /api/playrecords 200 in 13ms
- POST /api/playrecords 200 in 7ms
- POST /api/playrecords 200 in 16ms
- GET /play?title=%E6%AF%95%E6%AD%A3%E6%98%8E%E7%9A%84%E8%AF%81%E6%98%8E&year=2025&stype=movie&source=api_46&id=32689 200 in 174ms
- GET /api/playrecords 200 in 27ms
- GET /api/skipconfigs 200 in 33ms
- GET /api/favorites 200 in 34ms
- DELETE /api/playrecords?key=api_46%2B32689 200 in 11ms
- DELETE /api/skipconfigs?key=api_46%2B32689 200 in 7ms
- POST /api/skipconfigs 200 in 7ms
- GET /api/favorites 200 in 7ms
- DELETE /api/playrecords?key=api_74%2B32689 200 in 11ms
- DELETE /api/skipconfigs?key=api_74%2B32689 200 in 6ms
- POST /api/skipconfigs 200 in 8ms
- GET /api/favorites 200 in 8ms
- DELETE /api/playrecords?key=api_46%2B32689 200 in 8ms
- DELETE /api/skipconfigs?key=api_46%2B32689 200 in 8ms
- POST /api/skipconfigs 200 in 7ms
- GET /api/favorites 200 in 42ms
- POST /api/playrecords 200 in 29ms
- POST /api/playrecords 200 in 21ms
- DELETE /api/playrecords?key=api_103%2B83819 200 in 7ms
- DELETE /api/skipconfigs?key=api_103%2B83819 200 in 7ms
- POST /api/skipconfigs 200 in 7ms
- GET /api/favorites 200 in 16ms
+ ✓ Compiled /play in 522ms (1353 modules)
+ ✓ Compiled /api/search in 138ms (976 modules)
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ GET /api/search?q=%E7%9B%97%E5%A2%93%E7%AC%94%E8%AE%B0 200 in 8308ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ ✓ Compiled /api/favorites in 128ms (978 modules)
+ GET /api/favorites 200 in 185ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
  POST /api/playrecords 200 in 12ms
- POST /api/playrecords 200 in 12ms
- POST /api/playrecords 200 in 6ms
- DELETE /api/playrecords?key=api_101%2B81682 200 in 8ms
- DELETE /api/skipconfigs?key=api_101%2B81682 200 in 7ms
- POST /api/skipconfigs 200 in 7ms
- GET /api/favorites 200 in 14ms
- POST /api/playrecords 200 in 15ms
- POST /api/playrecords 200 in 15ms
- POST /api/playrecords 200 in 6ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ POST /api/playrecords 200 in 5ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
  POST /api/playrecords 200 in 10ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
  POST /api/playrecords 200 in 11ms
- POST /api/playrecords 200 in 12ms
- POST /api/playrecords 200 in 7ms
- POST /api/playrecords 200 in 25ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ POST /api/playrecords 200 in 151ms
+ GET /play?title=%E7%9B%97%E5%A2%93%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%BA%91%E9%A1%B6%E5%A4%A9%E5%AE%AB&year=2021&stype=tv&stitle=%E7%9B%97%E5%A2%93%E7%AC%94%E8%AE%B0&source=api_72&id=66217 200 in 157ms
+ GET /api/playrecords 200 in 33ms
+ ✓ Compiled /api/skipconfigs in 153ms (972 modules)
+ GET /api/favorites 200 in 324ms
+ GET /api/skipconfigs 200 in 333ms
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+ POST /api/playrecords 200 in 21ms
+保存播放记录失败 SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5595:19)
+    at successSteps (node:internal/deps/undici/undici:5566:27)
+    at specConsumeBody (node:internal/deps/undici/undici:5572:9)
+    at NextRequest.json (node:internal/deps/undici/undici:5462:18)
+    at POST (webpack-internal:///(rsc)/./src/app/api/playrecords/route.ts:90:36)
+    at async /Users/gunanbei/coding/code/IdeaProjects/LunaTV/node_modules/.pnpm/next@14.2.30_@babel+core@7.27.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/Users/gunanbei/coding/code/IdeaProjects/LunaTV/node_modules/.pnpm/next@14.2.30_@babel+core@7.27.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/Users/gunanbei/coding/code/IdeaProjects/LunaTV/node_modules/.pnpm/next@14.2.30_@babel+core@7.27.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/Users/gunanbei/coding/code/IdeaProjects/LunaTV/node_modules/.pnpm/next@14.2.30_@babel+core@7.27.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/Users/gunanbei/coding/code/IdeaProjects/LunaTV/node_modules/.pnpm/next@14.2.30_@babel+core@7.27.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/base-server.js:1588:28)
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...
+Redis initial connection failed: Error: Socket already opened
+    at RedisSocket.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/socket.js:48:19)
+    at Commander.connect (webpack-internal:///(rsc)/./node_modules/.pnpm/@redis+client@1.6.1/node_modules/@redis/client/dist/lib/client/index.js:185:70)
+    at Timeout.connectWithRetry [as _onTimeout] (webpack-internal:///(rsc)/./src/lib/redis-base.db.ts:93:30)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+Will retry in 5 seconds...

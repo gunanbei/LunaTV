@@ -217,7 +217,7 @@ function PlayPageClient() {
     if (sources.length === 1) return sources[0];
 
     // 将播放源均分为两批，并发测速各批，避免一次性过多请求
-    const batchSize = Math.ceil(sources.length / 2);
+    const batchSize = Math.ceil(sources.length / 8);
     const allResults: Array<{
       source: SearchResult;
       testResult: { quality: string; loadSpeed: string; pingTime: number };
