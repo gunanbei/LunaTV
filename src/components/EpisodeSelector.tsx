@@ -564,9 +564,9 @@ const EpisodeSelector: React.FC<EpisodeSelectorProps> = ({
                         {/* 信息区域 */}
                         <div className='flex-1 min-w-0 flex flex-col justify-between h-20'>
                           {/* 标题和分辨率 - 顶部 */}
-                          <div className='flex items-start justify-between gap-3 h-6'>
+                          <div className='flex items-start justify-between gap-2 min-h-[1.5rem]'>
                             <div className='flex-1 min-w-0 relative group/title'>
-                              <h3 className='font-medium text-base truncate text-gray-900 dark:text-gray-100 leading-none'>
+                              <h3 className='font-medium text-base truncate text-gray-900 dark:text-gray-100 leading-tight'>
                                 {source.title}
                               </h3>
                               {/* 标题级别的 tooltip - 第一个元素不显示 */}
@@ -581,14 +581,20 @@ const EpisodeSelector: React.FC<EpisodeSelectorProps> = ({
                               const sourceKey = `${source.source}-${source.id}`;
                               const videoInfo = videoInfoMap.get(sourceKey);
 
-                              if (videoInfo && videoInfo.quality !== '未知') {
+                              // 如果关闭了优选测速开关，不显示清晰度
+                              if (!optimizationEnabled) {
+                                return null;
+                              }
+
+                              // 如果有测速结果
+                              if (videoInfo) {
                                 if (videoInfo.hasError) {
                                   return (
-                                    <div className='bg-gray-500/10 dark:bg-gray-400/20 text-red-600 dark:text-red-400 px-1.5 py-0 rounded text-xs flex-shrink-0 min-w-[50px] text-center'>
-                                      检测失败
+                                    <div className='bg-gray-500/10 dark:bg-gray-400/20 text-red-600 dark:text-red-400 px-1.5 py-0.5 rounded text-xs flex-shrink-0 min-w-[48px] text-center font-medium leading-tight'>
+                                      失败
                                     </div>
                                   );
-                                } else {
+                                } else if (videoInfo.quality !== '未知') {
                                   // 根据分辨率设置不同颜色：2K、4K为紫色，1080p、720p为绿色，其他为黄色
                                   const isUltraHigh = ['4K', '2K'].includes(
                                     videoInfo.quality
@@ -604,15 +610,27 @@ const EpisodeSelector: React.FC<EpisodeSelectorProps> = ({
 
                                   return (
                                     <div
-                                      className={`bg-gray-500/10 dark:bg-gray-400/20 ${textColorClasses} px-1.5 py-0 rounded text-xs flex-shrink-0 min-w-[50px] text-center`}
+                                      className={`bg-gray-500/10 dark:bg-gray-400/20 ${textColorClasses} px-1.5 py-0.5 rounded text-xs flex-shrink-0 min-w-[48px] text-center font-medium leading-tight`}
                                     >
                                       {videoInfo.quality}
+                                    </div>
+                                  );
+                                } else {
+                                  // 测速完成但仍然无法获取清晰度（极少见情况）
+                                  return (
+                                    <div className='bg-gray-500/10 dark:bg-gray-400/20 text-blue-600 dark:text-blue-400 px-1.5 py-0.5 rounded text-xs flex-shrink-0 min-w-[48px] text-center font-medium leading-tight'>
+                                      可用
                                     </div>
                                   );
                                 }
                               }
 
-                              return null;
+                              // 测速中显示占位符
+                              return (
+                                <div className='bg-gray-500/10 dark:bg-gray-400/20 text-gray-500 dark:text-gray-400 px-1.5 py-0.5 rounded text-xs flex-shrink-0 min-w-[48px] text-center font-medium leading-tight'>
+                                  测速中
+                                </div>
+                              );
                             })()}
                           </div>
 

@@ -62,6 +62,37 @@ export function processImageUrl(originalUrl: string): string {
 }
 
 /**
+ * 从m3u8内容中解析视频分辨率
+ * @param m3u8Content m3u8文件内容
+ * @returns 视频宽度，如果无法解析则返回0
+ */
+function parseResolutionFromM3u8(m3u8Content: string): number {
+  try {
+    // 尝试从 #EXT-X-STREAM-INF 标签中提取 RESOLUTION
+    const resolutionMatch = m3u8Content.match(/RESOLUTION=(\d+)x(\d+)/i);
+    if (resolutionMatch) {
+      const width = parseInt(resolutionMatch[1], 10);
+      console.log(`[M3U8解析] 从清单文件解析到分辨率: ${width}x${resolutionMatch[2]}`);
+      return width;
+    }
+
+    // 尝试从 #EXT-X-MEDIA 标签中提取分辨率信息
+    const mediaMatch = m3u8Content.match(/RESOLUTION=(\d+)x(\d+)/);
+    if (mediaMatch) {
+      const width = parseInt(mediaMatch[1], 10);
+      console.log(`[M3U8解析] 从媒体标签解析到分辨率: ${width}x${mediaMatch[2]}`);
+      return width;
+    }
+
+    console.log('[M3U8解析] 清单文件中未找到分辨率信息');
+    return 0;
+  } catch (error) {
+    console.error('[M3U8解析] 解析分辨率时出错:', error);
+    return 0;
+  }
+}
+
+/**
  * 从m3u8地址获取视频质量等级和网络信息
  * @param m3u8Url m3u8播放列表的URL
  * @returns Promise<{quality: string, loadSpeed: string, pingTime: number}> 视频质量等级和网络信息
@@ -72,6 +103,18 @@ export async function getVideoResolutionFromM3u8(m3u8Url: string): Promise<{
   pingTime: number; // 网络延迟（毫秒）
 }> {
   try {
+    // 首先尝试获取m3u8内容以解析分辨率
+    let m3u8Width = 0;
+    try {
+      const m3u8Response = await fetch(m3u8Url);
+      if (m3u8Response.ok) {
+        const m3u8Content = await m3u8Response.text();
+        m3u8Width = parseResolutionFromM3u8(m3u8Content);
+      }
+    } catch (error) {
+      console.log('[M3U8解析] 无法获取m3u8内容:', error);
+    }
+
     // 直接使用m3u8 URL作为视频源，避免CORS问题
     return new Promise((resolve, reject) => {
       const video = document.createElement('video');
@@ -123,6 +166,19 @@ export async function getVideoResolutionFromM3u8(m3u8Url: string): Promise<{
 
       let fragmentStartTime = 0;
 
+      // 根据宽度计算清晰度
+      const getQualityFromWidth = (width: number): string => {
+        if (!width || width <= 0) return '未知';
+        
+        // 根据视频宽度判断视频质量等级，使用经典分辨率的宽度作为分割点
+        if (width >= 3840) return '4K'; // 4K: 3840x2160
+        if (width >= 2560) return '2K'; // 2K: 2560x1440
+        if (width >= 1920) return '1080p'; // 1080p: 1920x1080
+        if (width >= 1280) return '720p'; // 720p: 1280x720
+        if (width >= 854) return '480p'; // 480p: 854x480
+        return 'SD';
+      };
+
       // 检查是否可以返回结果
       const checkAndResolve = () => {
         if (
@@ -130,43 +186,29 @@ export async function getVideoResolutionFromM3u8(m3u8Url: string): Promise<{
           (hasSpeedCalculated || actualLoadSpeed !== '未知')
         ) {
           clearTimeout(timeout);
-          const width = video.videoWidth;
-          const height = video.videoHeight;
-          
-          if (width && width > 0) {
-            hls.destroy();
-            video.remove();
+          hls.destroy();
+          video.remove();
 
-            // 根据视频宽度判断视频质量等级，使用经典分辨率的宽度作为分割点
-            const quality =
-              width >= 3840
-                ? '4K' // 4K: 3840x2160
-                : width >= 2560
-                  ? '2K' // 2K: 2560x1440
-                  : width >= 1920
-                    ? '1080p' // 1080p: 1920x1080
-                    : width >= 1280
-                      ? '720p' // 720p: 1280x720
-                      : width >= 854
-                        ? '480p'
-                        : 'SD'; // 480p: 854x480
+          // 优先使用视频元数据中的宽度
+          let finalWidth = video.videoWidth || 0;
+          const height = video.videoHeight || 0;
 
-            // 输出调试信息，方便排查4K检测问题
-            console.log(`[清晰度检测] 宽度: ${width}px, 高度: ${height}px, 质量: ${quality}`);
-
-            resolve({
-              quality,
-              loadSpeed: actualLoadSpeed,
-              pingTime: Math.round(pingTime),
-            });
-          } else {
-            // webkit 无法获取尺寸，直接返回
-            resolve({
-              quality: '未知',
-              loadSpeed: actualLoadSpeed,
-              pingTime: Math.round(pingTime),
-            });
+          // 如果视频元数据无法获取宽度（WebKit），使用m3u8解析的宽度
+          if (!finalWidth && m3u8Width > 0) {
+            finalWidth = m3u8Width;
+            console.log(`[清晰度检测] 使用M3U8解析的宽度: ${finalWidth}px`);
           }
+
+          const quality = getQualityFromWidth(finalWidth);
+
+          // 输出调试信息，方便排查检测问题
+          console.log(`[清晰度检测] 宽度: ${finalWidth}px, 高度: ${height}px, 质量: ${quality}, 来源: ${finalWidth === m3u8Width ? 'M3U8解析' : '视频元数据'}`);
+
+          resolve({
+            quality,
+            loadSpeed: actualLoadSpeed,
+            pingTime: Math.round(pingTime),
+          });
         }
       };
 
