@@ -97,25 +97,63 @@ function parseResolutionFromM3u8(m3u8Content: string): number {
  * @param m3u8Url m3u8播放列表的URL
  * @returns Promise<{quality: string, loadSpeed: string, pingTime: number}> 视频质量等级和网络信息
  */
+/**
+ * 获取 m3u8 内容，支持 CORS 跨域处理
+ * @param m3u8Url m3u8 文件 URL
+ * @returns m3u8 文件内容
+ */
+async function fetchM3u8Content(m3u8Url: string): Promise<string> {
+  try {
+    // 首先尝试直接请求
+    const response = await fetch(m3u8Url);
+    if (response.ok) {
+      return await response.text();
+    }
+    throw new Error(`HTTP ${response.status}`);
+  } catch (error) {
+    // 如果直接请求失败，尝试通过服务器端代理
+    console.log('[M3U8获取] 直接请求失败，尝试使用服务器代理:', error);
+    
+    try {
+      const proxyUrl = `/api/proxy/m3u8-content?url=${encodeURIComponent(m3u8Url)}`;
+      const proxyResponse = await fetch(proxyUrl);
+      
+      if (proxyResponse.ok) {
+        console.log('[M3U8获取] 服务器代理请求成功');
+        return await proxyResponse.text();
+      }
+      
+      throw new Error(`Proxy failed: HTTP ${proxyResponse.status}`);
+    } catch (proxyError) {
+      console.error('[M3U8获取] 服务器代理也失败:', proxyError);
+      throw proxyError;
+    }
+  }
+}
+
 export async function getVideoResolutionFromM3u8(m3u8Url: string): Promise<{
   quality: string; // 如720p、1080p等
   loadSpeed: string; // 自动转换为KB/s或MB/s
   pingTime: number; // 网络延迟（毫秒）
 }> {
   try {
-    // 首先尝试获取m3u8内容以解析分辨率
+    // 并行执行：同时启动 M3U8 解析和 HLS 测速
     let m3u8Width = 0;
-    try {
-      const m3u8Response = await fetch(m3u8Url);
-      if (m3u8Response.ok) {
-        const m3u8Content = await m3u8Response.text();
-        m3u8Width = parseResolutionFromM3u8(m3u8Content);
+    
+    // 启动 M3U8 解析（异步，不等待）
+    const m3u8ParsePromise = (async () => {
+      try {
+        const m3u8Content = await fetchM3u8Content(m3u8Url);
+        const width = parseResolutionFromM3u8(m3u8Content);
+        m3u8Width = width;
+        return width;
+      } catch (error) {
+        console.log('[M3U8解析] 无法获取m3u8内容:', error);
+        return 0;
       }
-    } catch (error) {
-      console.log('[M3U8解析] 无法获取m3u8内容:', error);
-    }
+    })();
 
-    // 直接使用m3u8 URL作为视频源，避免CORS问题
+    // 同时启动 HLS 测速（不等待 M3U8 解析完成）
     return new Promise((resolve, reject) => {
       const video = document.createElement('video');
       video.muted = true;
@@ -180,7 +218,7 @@ export async function getVideoResolutionFromM3u8(m3u8Url: string): Promise<{
       };
 
       // 检查是否可以返回结果
-      const checkAndResolve = () => {
+      const checkAndResolve = async () => {
         if (
           hasMetadataLoaded &&
           (hasSpeedCalculated || actualLoadSpeed !== '未知')
@@ -189,20 +227,41 @@ export async function getVideoResolutionFromM3u8(m3u8Url: string): Promise<{
           hls.destroy();
           video.remove();
 
-          // 优先使用视频元数据中的宽度
-          let finalWidth = video.videoWidth || 0;
+          // 等待 M3U8 解析完成（如果还没完成的话）
+          // 使用 Promise.race 设置最大等待时间，避免无限等待
+          try {
+            await Promise.race([
+              m3u8ParsePromise,
+              new Promise(resolve => setTimeout(() => resolve(0), 1000)) // 最多等待1秒
+            ]);
+          } catch (error) {
+            console.log('[M3U8解析] 等待M3U8解析时出错:', error);
+          }
+
+          let finalWidth = 0;
+          let source = '';
           const height = video.videoHeight || 0;
 
-          // 如果视频元数据无法获取宽度（WebKit），使用m3u8解析的宽度
-          if (!finalWidth && m3u8Width > 0) {
+          // 优先级1：优先使用 m3u8 解析的宽度
+          if (m3u8Width > 0) {
             finalWidth = m3u8Width;
-            console.log(`[清晰度检测] 使用M3U8解析的宽度: ${finalWidth}px`);
+            source = 'M3U8解析';
+          } 
+          // 优先级2：如果 m3u8 没有，使用视频元数据
+          else if (video.videoWidth > 0) {
+            finalWidth = video.videoWidth;
+            source = '视频元数据';
+          }
+          // 优先级3：都无法获取
+          else {
+            finalWidth = 0;
+            source = '无法获取';
           }
 
           const quality = getQualityFromWidth(finalWidth);
 
           // 输出调试信息，方便排查检测问题
-          console.log(`[清晰度检测] 宽度: ${finalWidth}px, 高度: ${height}px, 质量: ${quality}, 来源: ${finalWidth === m3u8Width ? 'M3U8解析' : '视频元数据'}`);
+          console.log(`[清晰度检测] 宽度: ${finalWidth}px, 高度: ${height}px, 质量: ${quality}, 来源: ${source}`);
 
           resolve({
             quality,
