@@ -342,6 +342,71 @@ const EpisodeSelector: React.FC<EpisodeSelectorProps> = ({
     [onSourceChange]
   );
 
+  // 计算播放源综合评分（与 play/page.tsx 相同的评分机制）
+  const calculateSourceScore = useCallback(
+    (
+      videoInfo: VideoInfo,
+      maxSpeed: number,
+      minPing: number,
+      maxPing: number
+    ): number => {
+      let score = 0;
+
+      // 分辨率评分 (40% 权重)
+      const qualityScore = (() => {
+        switch (videoInfo.quality) {
+          case '4K':
+            return 100;
+          case '2K':
+            return 85;
+          case '1080p':
+            return 75;
+          case '720p':
+            return 60;
+          case '480p':
+            return 40;
+          case 'SD':
+            return 20;
+          default:
+            return 0;
+        }
+      })();
+      score += qualityScore * 0.4;
+
+      // 下载速度评分 (40% 权重)
+      const speedScore = (() => {
+        const speedStr = videoInfo.loadSpeed;
+        if (speedStr === '未知' || speedStr === '测量中...') return 30;
+
+        const match = speedStr.match(/^([\d.]+)\s*(KB\/s|MB\/s)$/);
+        if (!match) return 30;
+
+        const value = parseFloat(match[1]);
+        const unit = match[2];
+        const speedKBps = unit === 'MB/s' ? value * 1024 : value;
+
+        const speedRatio = speedKBps / maxSpeed;
+        return Math.min(100, Math.max(0, speedRatio * 100));
+      })();
+      score += speedScore * 0.4;
+
+      // 网络延迟评分 (20% 权重)
+      const pingScore = (() => {
+        const ping = videoInfo.pingTime;
+        if (ping <= 0) return 0;
+
+        if (maxPing === minPing) return 100;
+
+        const pingRatio = (maxPing - ping) / (maxPing - minPing);
+        return Math.min(100, Math.max(0, pingRatio * 100));
+      })();
+      score += pingScore * 0.2;
+
+      return Math.round(score * 100) / 100;
+    },
+    []
+  );
+
   const currentStart = currentPage * episodesPerPage + 1;
   const currentEnd = Math.min(
     currentStart + episodesPerPage - 1,
@@ -520,6 +585,7 @@ const EpisodeSelector: React.FC<EpisodeSelectorProps> = ({
               <div className='flex-1 overflow-y-auto space-y-2 pb-20'>
                 {availableSources
                   .sort((a, b) => {
+                    // 优先级1：当前播放源始终在最前面
                     const aIsCurrent =
                       a.source?.toString() === currentSource?.toString() &&
                       a.id?.toString() === currentId?.toString();
@@ -528,6 +594,73 @@ const EpisodeSelector: React.FC<EpisodeSelectorProps> = ({
                       b.id?.toString() === currentId?.toString();
                     if (aIsCurrent && !bIsCurrent) return -1;
                     if (!aIsCurrent && bIsCurrent) return 1;
+
+                    // 如果关闭了优选测速，不进行评分排序
+                    if (!optimizationEnabled) return 0;
+
+                    // 获取测速信息
+                    const aKey = `${a.source}-${a.id}`;
+                    const bKey = `${b.source}-${b.id}`;
+                    const aInfo = videoInfoMap.get(aKey);
+                    const bInfo = videoInfoMap.get(bKey);
+
+                    // 优先级2：有测速数据且成功的排在前面
+                    const aHasValidData = aInfo && !aInfo.hasError && aInfo.quality !== '未知';
+                    const bHasValidData = bInfo && !bInfo.hasError && bInfo.quality !== '未知';
+
+                    // 优先级3：测速失败的排在最后
+                    const aHasError = aInfo?.hasError;
+                    const bHasError = bInfo?.hasError;
+
+                    // 如果一个失败，一个成功或未测速，失败的排后面
+                    if (aHasError && !bHasError) return 1;
+                    if (!aHasError && bHasError) return -1;
+
+                    // 如果一个有有效数据，一个没有，有数据的排前面
+                    if (aHasValidData && !bHasValidData) return -1;
+                    if (!aHasValidData && bHasValidData) return 1;
+
+                    // 优先级4：都有有效数据时，按评分排序（从高到低）
+                    if (aHasValidData && bHasValidData) {
+                      // 计算所有有效源的最大速度和延迟范围
+                      const validSources = availableSources
+                        .map((s) => {
+                          const key = `${s.source}-${s.id}`;
+                          const info = videoInfoMap.get(key);
+                          return info && !info.hasError && info.quality !== '未知' ? info : null;
+                        })
+                        .filter(Boolean) as VideoInfo[];
+
+                      if (validSources.length > 0) {
+                        // 计算最大速度
+                        const speeds = validSources
+                          .map((info) => {
+                            const match = info.loadSpeed.match(/^([\d.]+)\s*(KB\/s|MB\/s)$/);
+                            if (!match) return 0;
+                            const value = parseFloat(match[1]);
+                            const unit = match[2];
+                            return unit === 'MB/s' ? value * 1024 : value;
+                          })
+                          .filter((s) => s > 0);
+                        const maxSpeed = speeds.length > 0 ? Math.max(...speeds) : 1024;
+
+                        // 计算延迟范围
+                        const pings = validSources
+                          .map((info) => info.pingTime)
+                          .filter((p) => p > 0);
+                        const minPing = pings.length > 0 ? Math.min(...pings) : 50;
+                        const maxPing = pings.length > 0 ? Math.max(...pings) : 1000;
+
+                        // 计算评分
+                        const aScore = calculateSourceScore(aInfo!, maxSpeed, minPing, maxPing);
+                        const bScore = calculateSourceScore(bInfo!, maxSpeed, minPing, maxPing);
+
+                        // 评分高的排前面
+                        return bScore - aScore;
+                      }
+                    }
+
+                    // 其他情况保持原顺序
                     return 0;
                   })
                   .map((source, index) => {
